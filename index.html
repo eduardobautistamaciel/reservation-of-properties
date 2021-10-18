@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CSS/estilo.css" type="text/css" rel="stylesheet">
+  <title>Aplicación web para reserva de inmuebles</title>
+</head>
+
+<body>
+  <div class="tipoUsuarioActual" id="tipoUsuarioActual"></div>
+  <div id="contenedor">
+    <div id="cabezal" class="clearfix">
+      <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+
+      <div id="menuNavegacion" class="menuDeNavegacion">
+      <ul id="navPrincipal">
+
+          <!-- F09 - Boton para acceder a sus propias reservas -->
+          <li class="huesped" style="display: none;">
+            <a id="susReservas">Sus Reservas</a>
+          </li>
+
+          <!-- F13 - Registrar un inmueble -->
+          <li class="anfitrion" style="display: none;">
+            <a id="aRegistrarInmueble">Registrar un Inmueble</a>
+          </li>
+
+          <!-- F14 - Dar de alta a un anfitrión -->
+          <li class="administrador" style="display: none;">
+            <a id="aRegistrarAnfi"> Dar de alta a un Anfitrion </a>
+          </li>
+
+          <!-- F11 - Cierre de sesión -->
+          <li class="administrador huesped anfitrion" style="display: none;">
+            <a id="cerrarSesion" >Cierre de sesion</a>
+          </li>
+
+      </ul>
+
+
+      <!-- F15 - Cargar cotización -->
+      <div id="cargarCotizacion" class="administrador" style="display: none;">
+        <label for="txtCoti">Cargar cotización</label>
+        <input type="text" id="txtCoti"> <br>
+        <input type="button" value="Cargar la cotización" id="btnGuardarcotizacion"> <br>
+        <p id="pCarga"></p>
+      </div>
+
+      <br>
+
+      <!-- F01 - Cambio de moneda -->
+      <div class="cambiarCotizacion">
+        <select id="slcCombo" class="visitante huesped">
+          <option value="$">Pesos UY</option>
+          <option value="u$s">Dólares USD</option>
+        </select>
+      </div>
+
+
+      <!-- F05 - Ingreso al sistema /  F04 - Registrarse en la aplicación -->
+      <div id="aux" class="visitante">
+        <a id="aIniciarSesion">Iniciar Sesion</a> <span>|</span> <a id="aRegistrarse">Registrarse</a>
+        <!--  Solo se le muestra al visitante, a los demas se le ocultara -->
+      </div><!-- FIN AUX -->
+
+
+    </div>
+    </div><!-- FIN CABEZAL -->
+    <div id="contenido">
+      
+      <div id="divMensajeReservas" class="huesped"></div>
+
+      <!-- DIV para mostrar formularios -->
+      <div id="divContenido" class="iniciarSesion registrarse registrarAnfi registrarInmueble"> </div>
+      <!-- Botones Varios -->
+      <input id="btnInicioSesion" class="iniciarSesion visitante" style="display: none;" type="button" value="Iniciar Sesion">
+      <input id="BtnRegistrarse" class="registrarse visitante" style="display: none;" type="button" value="Registrarse">
+      <input id="BtnRegistrarAnfi" class="registrarAnfi" style="display: none;" type="button" value="Registrar Anfitrión">
+      <input id="BtnRegistrarInmueble" class="registrarInmueble" style="display: none;" type="button" value="Registrar Inmueble"> <br>
+
+
+      <div class="buscadorYOrdenamiento">
+
+        <!--  F03 - Buscador de Inmuebles -->
+        <div class="visitante huesped">
+          <label for=""> Buscador: </label>
+          <input id="txtBuscador" type="text"> <input id="btnBuscador" type="button" value="Buscar"></div>
+
+        <hr>
+        <!--F02 – Ordenador de listado por precio-->
+        <input id="btnOrdenarPorCalificaciones" class=" visitante huesped" type="button" value="Ordenar por calificaciones o remover busqueda" />
+        <input id="btnOrdenarPorDescendente" class="visitante huesped" type="button" value="Ordenar por precio de mayor a menor" /> 
+        <input id="btnOrdenarPorAscendente" class="visitante huesped" type="button" value="Ordenar por precio de menor a mayor" />
+        <div id="mensajeOrdenadorPor" class="visitante huesped"> </div>
+
+
+        <!--F16 – Ordenador de listado por precio-->
+        <div class="administrador" style="display: none;">
+          <p> Ingrese un rango de precios</p>
+          <label for="txtDesde" >Desde:</label>
+          <input type="text" id="txtDesde"> <br>
+          <label for="txtHasta">Hasta:</label>
+          <input type="text" id="txtHasta"> <br>
+          <p id="pReporte"></p>
+          <input type="button" value="Filtar Reporte" id="btnBuscarReporte">
+          <input type="button" value="Remover Filtro" id="btnRemoverFiltro"> <br>
+          <hr>
+        </div>
+
+      </div>
+
+      <div id="divMostrarReporte" class="administrador"></div>
+
+      <div id="divMostrarInmuebles" class="visitante huesped anfitrion"></div>
+
+     <br>
+
+      <!--FIN INMUEBLE-->
+    </div><!-- FIN CONTENIDO -->
+    <div id="pie">
+      <a href="">Creado por Eduardo Bautista</a>
+    </div><!-- FIN PIE -->
+  </div><!-- FIN CONTENEDOR -->
+  <script src="js/clase.js"></script>
+  <script src="js/Pagina.js"></script>
+
+</body>
+
+</html>
