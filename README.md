@@ -1,5 +1,8 @@
 # Projecto: Aplicación web para reserva de inmuebles
 > Link to website: https://jovial-leakey-c1790b.netlify.app/
+---
+![Reserva](https://user-images.githubusercontent.com/64867705/137958055-983ea61b-9082-4c98-b4a1-f7075f6daf74.JPG)
+---
 
 ## Gestión de perfiles 
 La aplicación cuenta con lo siguiente tipos de perfiles:
@@ -34,5 +37,5 @@ El perfil administrador podrá:
 - Ver un reporte de inmuebles. Podrá ver en una tabla inmuebles de acuerdo con un rango de precios ingresado por el administrador. Se tendrán campos para desde y hasta, y en caso de no ingresar valores para alguno de los 2 se omitirá el límite en particular. Es decir, que si no se ingresa desde no habrá cota inferior; análogamente lo mismo para el campo hasta. Se validará que los importes sean numéricos y que el desde sea menor al hasta. La moneda utilizada en este caso es pesos uruguayos.
 - Cerrar sesión llevando al usuario a la vista de home del visitante.
 
-![Reserva](https://user-images.githubusercontent.com/64867705/137958055-983ea61b-9082-4c98-b4a1-f7075f6daf74.JPG)
+
 
