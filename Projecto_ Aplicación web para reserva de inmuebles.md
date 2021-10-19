@@ -1,5 +1,5 @@
 # Projecto: Aplicación web para reserva de inmuebles
->>> Link to website: https://jovial-leakey-c1790b.netlify.app/
+> Link to website: https://jovial-leakey-c1790b.netlify.app/
 
 ## Gestión de perfiles 
 La aplicación cuenta con lo siguiente tipos de perfiles:
